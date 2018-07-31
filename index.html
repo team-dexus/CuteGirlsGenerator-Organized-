@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>CuteGirlsGenerator(Beta)</title><!--Added by CSlash,Changed by JPNYKW-->
+
+	<script src="js/canvasKit.js"></script><!--Added by JPNYKW-->
+	<script src="js/draw.js"></script><!--Added by JPNYKW-->
+	<script src="js/main.js"></script><!--Added by JPNYKW-->
+
+	<script src="dist/keras.js"></script><!--Added by mirukuma-->
+	<script src="dist/webdnn.js"></script>
+	<script src="js/generate.js"></script> <!--Added by mirukuma-->
+
+	<style> /*Added by JPNYKW*/
+		body{
+			background:linear-gradient(-90deg,#EAEAEA,#DBDBDB,#CECECE,#DFDFDF);
+			font-family:Mangal;
+			font-size:16px;
+			color:#222;
+		}
+		.text{
+			color:#F5AE6B;
+		}
+		.logo{
+			width:570px;
+			font-size:40px;
+			font-family:Impact;
+			border:dashed 1px #222;
+		}
+		button{
+			font-family:Estrangelo Edessa;
+			background:rgba(0,0,0,0);
+			font-size:15px;
+			font-family:
+		}
+		canvas{
+			background:linear-gradient(-80deg,#FFD85B,#FCA972,#FC9BB0,#FF81CB);
+		}
+		.subtext{
+			font-family:Impact;
+			font-size:35px;
+		}
+
+	</style>
+	<link rel="shortcut icon" href="code087.png"><!--Added by JPNYKW-->
+</head>
+
+<body>
+	<center>
+		<span id="shel"><h1 id="display" class="logo">-</h1></span><!--Added by JPNYKW-->
+
+		<span>Cute girls will be a save the world. we think so much.</span><br><br><!--Added by JPNYKW-->
+
+		<span class="subtext">IMAGE TAGS (NOT WORKING...)</span><br><!--Added by JPNYKW,Changed by CS017-->
+		<input id="words" value="幼女"/><!--Added by mirukuma,Changed by JPNYKW--><br>
+
+		<div><!--Added by JPNYKW-->
+			<span class="subtext">SETTINGS</span><br><!--Added by JPNYKW-->
+			WIDTH<br><!--Added by JPNYKW-->
+			<input id="w" value="128"/><br><!--Added by JPNYKW-->
+			HEIGHT<br><!--Added by JPNYKW-->
+			<input id="h" value="128"/><br><!--Added by JPNYKW-->
+			<button id="generate" onclick="setImgSize();c.time();generate2()"><span id = "genOrLoad"></span></button><!--Added by mirukuma,Changed by mirukuma,Changed by CS017--><br><br><!--Added by JPNYKW-->
+
+			<canvas id="output" width="128px" height="128px"></canvas><!--Added by JPNYKW--><br>
+			<button id="download" onclick="downloadHandle()" disabled>Download Image!</button><!--Added by CS017,Changed by JPNYKW,Changed by CS017-->
+		</div>
+
+		&spades; Here is page of motion test. yet not finished.<!--Added by JPNYKW-->
+		<br>Version : 1.2(Beta)<!--Added by JPNYKW-->
+	</center>
+</body>
+
+</html>
