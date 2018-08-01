@@ -47,6 +47,7 @@ function generate2() {
 		console.log(y_typed_array);
 		
 		if (y_typed_array.includes(NaN)) {
+			console.timeEnd();
 			alert('Failed the generated.');
 		} else {
 			console.log('finished');
