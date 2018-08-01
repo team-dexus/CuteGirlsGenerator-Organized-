@@ -40,7 +40,6 @@ function generate2() {
 	// Select the tag
 	x.set(noise);
 	console.log(x);
-	console.log('sex'); // :ha:
 
 	runner.run().then(function() {
 		console.log('Before', y); // debug
