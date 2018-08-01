@@ -154,7 +154,7 @@ noise=np.random.normal(0, 0.5, [1,z_size])
 
 #model_set
 g = generator(512, 512, z_size)
-serializers.load_npz("generator.model", g)
+#serializers.load_npz("generator.model", g)
 x = chainer.Variable(np.zeros((1,z_size), dtype=np.float32))
 y = g(x,np.zeros(NUMBER_OF_TAG),5,1)
 
@@ -170,5 +170,5 @@ graph = ChainerConverter().convert([x], [y])
 
 from webdnn.backend import generate_descriptor
 
-exec_info = generate_descriptor("webgpu", graph)  # also "webassembly", "webgl", "fallback" are available.
+exec_info = generate_descriptor("webgl", graph)  # also "webassembly", "webgl", "fallback" are available.
 exec_info.save("./output")
