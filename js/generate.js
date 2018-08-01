@@ -43,8 +43,9 @@ function generate2() {
 	console.log('sex'); // :ha:
 
 	runner.run().then(function() {
+		console.log('Before', y); // debug
 		let y_typed_array = y.toActual();
-		console.log(y_typed_array);
+		console.log('After', y_typed_array);
 		
 		if (y_typed_array.includes(NaN)) {
 			console.timeEnd();
@@ -52,7 +53,7 @@ function generate2() {
 		} else {
 			console.log('finished');
 			generatedData = y_typed_array;
-			drawGeneratedImage();
+			drawGeneratedImage(generatedData);
 		}
 		
 		onGenerated = true;
