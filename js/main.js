@@ -34,7 +34,7 @@ function textRoll(text, target, interval, subtarget, afterInput) {
 		target.innerText = text.substr(0, cnt);
 		if(cnt > text.length) {
 			clearInterval(roll);
-			afterInput != void(0) && subtarget.innerHTML = afterInput;
+			afterInput && subtarget.innerHTML = afterInput;
 		}
 	}, interval);
 }
