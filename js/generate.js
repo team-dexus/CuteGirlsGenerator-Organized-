@@ -43,13 +43,13 @@ function generate2() {
 	console.log('sex'); // :ha:
 
 	runner.run().then(function() {
+		let y_typed_array = y.toActual();
+		console.log(y_typed_array);
+		
 		if (y_typed_array.includes(NaN)) {
 			alert('Failed the generated.');
 		} else {
 			console.log('finished');
-			let y_typed_array = y.toActual();
-			console.log(y_typed_array);
-
 			generatedData = y_typed_array;
 			drawGeneratedImage();
 		}
