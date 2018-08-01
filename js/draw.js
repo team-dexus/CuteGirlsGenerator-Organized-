@@ -22,7 +22,7 @@ CanvasRenderingContext2D.prototype.drawImageByData = function(ary, width, height
 	console.log('%cDebug %cSuccessful', 'color:#0093EF;font-weight:bold', 'color:#F53300;font-weight:bold', 'draw an Image');
 }
 
-function drawGeneratedImage() {
+function drawGeneratedImage(data) {
       cont.clearRect(0, 0, canv.width, canv.height);
-      cont.drawImageByData(generatedData, wid, hig, 0, 2, 0, 0);
+      cont.drawImageByData(data, wid, hig, 0, 2, 0, 0);
 }
