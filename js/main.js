@@ -1,4 +1,4 @@
-onGenerated = false, fileIndex = 0, generatedData; // stack value of return by generate2()
+var onGenerated = false, fileIndex = 0, generatedData; // stack value of return by generate2()
 tag = str => str.split(' '); // split strings of tag
 
 window.onload = function() {
