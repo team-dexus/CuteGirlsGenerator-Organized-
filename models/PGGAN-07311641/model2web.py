@@ -154,7 +154,7 @@ noise=np.random.normal(0, 0.5, [1,z_size])
 
 #model_set
 g = generator(512, 512, z_size)
-#serializers.load_npz("generator.model", g)
+serializers.load_npz("generator.model", g)
 x = chainer.Variable(np.zeros((1,z_size), dtype=np.float32))
 y = g(x,np.zeros(NUMBER_OF_TAG),5,1)
 
@@ -165,6 +165,7 @@ image = image.data[0]
 image = image.transpose(1,2,0)
 save_images((image * 127.5)+127.5,"test")
 
+REPLACE_SCALAR_OPERATOR=0
 from webdnn.frontend.chainer import ChainerConverter
 graph = ChainerConverter().convert([x], [y])
 
