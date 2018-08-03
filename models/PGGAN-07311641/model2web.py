@@ -165,11 +165,13 @@ image = image.data[0]
 image = image.transpose(1,2,0)
 save_images((image * 127.5)+127.5,"test")
 
-REPLACE_SCALAR_OPERATOR=0
+
 from webdnn.frontend.chainer import ChainerConverter
+from webdnn.backend import generate_descriptor
+from webdnn.util import flags
+
 graph = ChainerConverter().convert([x], [y])
 
-from webdnn.backend import generate_descriptor
-
+flags.optimize.REPLACE_SCALAR_OPERATOR = 0
 exec_info = generate_descriptor("webgl", graph)  # also "webassembly", "webgl", "fallback" are available.
 exec_info.save("./output")
