@@ -1,0 +1,186 @@
+body {
+      font-family: "メイリオ", sans-serif;
+      background: #ECECEC;
+
+      text-align: center;
+      margin: 0;
+}
+
+/*
+      Define header style
+*/
+
+.header {
+      background: #FFF;
+      width: 100%;
+}
+
+.header .label {
+      background: #B9DE25;
+      height: 20px;
+      width: 100%;
+}
+
+.header .link {
+      padding: 16px 0;
+}
+
+.header .link a {
+      font-size: 24px;
+      padding: 40px;
+
+      cursor: auto;
+      transition: .41s;
+}
+
+.header .link a:hover {
+      color: #7e7e7e;
+      cursor: pointer;
+}
+
+/*
+      Define body style
+*/
+
+.body {
+      margin-top: 50px;
+}
+
+.sort {
+      display: inline-block;
+}
+
+.body .left {
+      margin-right: 50px;
+}
+
+.body .right {
+      margin-left: 50px;
+
+      position: relative;
+      top: -30px;
+}
+
+.body canvas {
+      background: #fff;
+}
+
+.body input::-webkit-input-placeholder{
+      color: #BEBEBE;
+}
+
+.body input {
+      background: rgba(0, 0, 0, 0);
+      font-size: 25px;
+      color: #BEBEBE;
+      width: 250px;
+
+      border: 0px;
+      border-bottom: solid 1px #BEBEBE;
+}
+
+.body button {
+      background: #15D1F9;
+      font-size: 25px;
+      color: #FFF;
+
+      height: 35px;
+      width: 250px;
+
+      border-radius: 5px;
+      border: 0px;
+
+      cursor: auto;
+      transition: .41s;
+}
+
+.body button:hover {
+      border-radius: 15px;
+      background: #0091B9;
+
+      cursor: pointer;
+}
+
+.body .right p {
+      margin-bottom: 30px;
+}
+
+.body .w-line {
+      border-top: solid 1px #BEBEBE;
+      width: 900px;
+      height: 1px;
+
+      margin: auto;
+
+      position: relative;
+      top: 20px;
+}
+
+/*
+      Define explain style
+*/
+
+.explain {
+      width: 1000px;
+      margin: auto;
+
+      position: relative;
+      top: 50px;
+}
+
+.explain .project-name p {
+      letter-spacing: 3px;
+      color: #2e2e2e;
+      margin: 15px;
+}
+
+.explain .project-name {
+      font-size: 42px;
+      font-weight: bold;
+      text-align: left;
+
+      position: relative;
+      right: 30px;
+      top: -10px;
+}
+
+.explain .project-name .head {
+      color: #B9DE25;
+}
+
+.explain .text {
+      text-align: left;
+      font-size: 20px;
+
+      position: relative;
+      left: 50px;
+}
+
+.explain .h-line {
+      background: #BEBEBE;
+      height: 200px;
+      width: 1px;
+}
+
+/*
+      Define footer style
+*/
+
+.footer {
+      text-align: center;
+      color: #FFF;
+
+      background: #2e2e2e;
+      height: 30px;
+      width: 100%;
+
+      position: absolute;
+      bottom: 0px;
+}
+
+.footer p {
+      font-size: 15px;
+
+      position: relative;
+      top: -10px;
+}
