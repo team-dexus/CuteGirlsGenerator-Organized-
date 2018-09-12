@@ -46,12 +46,12 @@ const defaultSize = 256;
             	hig = ~~h.value;
             	console.log(w, h);
             }
-
-            function downloadHandle() {
-            	let  downloadDom = document.createElement('a');
-            	downloadDom.download = `CGG${++fileIndex}.png`;
-            	downloadDom.href = canv.toDataURL();
-            	downloadDom.click();
-            }
       }
 })();
+
+function downloadHandle() {
+      let  downloadDom = document.createElement('a');
+      downloadDom.download = `CGG${++fileIndex}.png`;
+      downloadDom.href = canv.toDataURL();
+      downloadDom.click();
+}
