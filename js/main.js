@@ -1,53 +1,58 @@
-var onGenerated = false, fileIndex = 0, generatedData; // stack value of return by generate2()
-tag = str => str.split(' '); // split strings of tag
+const defaultSize = 256;
 
-window.onload = function() {
-	download = document.getElementById('download');
-	canv = document.getElementById('output');
-	cont = canv.getContext('2d');
-	w = document.getElementById('w');
-	h = document.getElementById('h');
-	canv.width = 256;
-	canv.height = 256;
-	
-	textRoll('-Generate ultimate cute girls-', document.getElementById('display'), 50, document.getElementById('shel'), '<h1 class="logo">-Generate <span class="text">ultimate cute</span> girls.-</h1>');
+(() => {
+      window.onload = init;
 
-	// Onload data of models.
-	document.getElementById('generate').setAttribute('disabled', true);
-	document.getElementById('download').setAttribute('disabled', true);
-	document.getElementById('genOrLoad').textContent = 'loading...';
-	WebDNN.load('./output').then(function(loaded){
-		console.log('loaded');
-		runner = loaded;
-		console.log(runner.backendName);
-		document.getElementById('generate').removeAttribute('disabled');
-		document.getElementById('download').removeAttribute('disabled');
-		document.getElementById('genOrLoad').textContent = 'Generate!';
-       // add your code here.
-   });
-}
+      function init() {
+            generatedData = null;
+            onGenerated = false;
+            fileIndex = 0;
 
-function textRoll(text, target, interval, subtarget, afterInput) {
-	let cnt = 0;
-	let roll = setInterval(function() {
-		cnt++;
-		target.innerText = text.substr(0, cnt);
-		if(cnt > text.length) {
-			clearInterval(roll);
-			if (afterInput) subtarget.innerHTML = afterInput;
-		}
-	}, interval);
-}
+            download = document.getElementById('download');
+            canv = document.getElementById('output');
+            cont = canv.getContext('2d');
 
-function setImgSize() {
-	wid = ~~w.value;
-	hig = ~~h.value;
-	console.log([w, h]); // debug
-}
+            w = document.getElementById('w').value;
+            h = document.getElementById('h').value;
+            w = w === '' ? defaultSize : ~~w;
+            h = h === '' ? defaultSize : ~~h;
 
-function downloadHandle() {
-	var DLImg = document.createElement('a');
-	DLImg.download = `CGG${++fileIndex}.png`;
-	DLImg.href = canv.toDataURL();
-	DLImg.click();
-}
+            canv.width = canv.height = 335;
+
+            // Onload data of models.
+            let button = {
+                  generate: document.getElementById('generate'),
+                  download: document.getElementById('download')
+            };
+
+            Object.keys(button).map(key => {
+                  button[key].setAttribute('disabled', true);
+                  button[key].style.background = '#BEBEBE';
+            });
+
+            WebDNN.load('./output').then(loaded => {
+            	console.log('loaded');
+            	console.log(runner.backendName);
+
+                  Object.keys(button).map(key => {
+                        button[key].removeAttribute('disabled');
+                        button[key].style.background = '#15D1F9';
+                  });
+
+                  runner = loaded;
+            });
+
+            function setImgSize() {
+            	wid = ~~w.value;
+            	hig = ~~h.value;
+            	console.log(w, h);
+            }
+
+            function downloadHandle() {
+            	let  downloadDom = document.createElement('a');
+            	downloadDom.download = `CGG${++fileIndex}.png`;
+            	downloadDom.href = canv.toDataURL();
+            	downloadDom.click();
+            }
+      }
+})();
