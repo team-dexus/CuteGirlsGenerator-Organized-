@@ -31,6 +31,7 @@ const defaultSize = 256;
             });
 
             WebDNN.load('./output').then(loaded => {
+                  runner = loaded;
             	console.log('loaded');
             	console.log(runner.backendName);
 
@@ -38,8 +39,6 @@ const defaultSize = 256;
                         button[key].removeAttribute('disabled');
                         button[key].style.background = '#15D1F9';
                   });
-
-                  runner = loaded;
             });
 
             function setImgSize() {
