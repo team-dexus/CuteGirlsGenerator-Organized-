@@ -1,75 +1,64 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8"/>
-	<title>CuteGirlsGenerator(Beta)</title>
+      <head>
+            <meta charset="utf-8"/>
+            <title>Cute Girls Generator</title>
+            <link rel="stylesheet" href="style.css">
+      </head>
 
-	<style> /*Added by JPNYKW*/
-		body{
-			background:linear-gradient(-90deg,#EAEAEA,#DBDBDB,#CECECE,#DFDFDF);
-			font-family:Mangal;
-			font-size:16px;
-			color:#222;
-		}
-		.text{
-			color:#F5AE6B;
-		}
-		.logo{
-			width:570px;
-			font-size:40px;
-			font-family:Impact;
-			border:dashed 1px #222;
-		}
-		button{
-			font-family:Estrangelo Edessa;
-			background:rgba(0,0,0,0);
-			font-size:15px;
-			font-family:
-		}
-		canvas{
-			background:linear-gradient(-80deg,#FFD85B,#FCA972,#FC9BB0,#FF81CB);
-		}
-		.subtext{
-			font-family:Impact;
-			font-size:35px;
-		}
+      <body>
+            <div class="header">
+                  <div class="label"></div>
+                  <div class="link">
+                        <a>HOME</a>
+                        <a>ABOUT</a>
+                        <a>CONTACT</a>
+                  </div>
+            </div>
 
-	</style>
-	<link rel="shortcut icon" href="code087.png"><!--Added by JPNYKW-->
-</head>
+            <div class="body">
+                  <div class="left sort">
+                        <canvas id="output"></canvas>
+                  </div>
 
-<body>
-	<center>
-		<span id="shel"><h1 id="display" class="logo">-</h1></span><!--Added by JPNYKW-->
+                  <div class="right sort">
+                        <p><input placeholder="tags"></p>
+                        <p><input id="w" placeholder="width"></p>
+                        <p><input id="h" placeholder="height"></p>
 
-		<span>Cute girls will be a save the world. we think so much.</span><br><br><!--Added by JPNYKW-->
+                        <p><button id="generate">Generate</button></p>
+                        <p><button id="download">Download</button></p>
+                  </div>
 
-		<span class="subtext">IMAGE TAGS (NOT WORKING...)</span><br><!--Added by JPNYKW,Changed by CS017-->
-		<input id="words" value="幼女"/><!--Added by mirukuma,Changed by JPNYKW--><br>
+                  <div class="w-line"></div>
 
-		<div><!--Added by JPNYKW-->
-			<span class="subtext">SETTINGS</span><br><!--Added by JPNYKW-->
-			WIDTH<br><!--Added by JPNYKW-->
-			<input id="w" value="128"/><br><!--Added by JPNYKW-->
-			HEIGHT<br><!--Added by JPNYKW-->
-			<input id="h" value="128"/><br><!--Added by JPNYKW-->
-			<button id="generate" onclick="setImgSize();console.time();generate2()"><span id = "genOrLoad"></span></button><!--Added by mirukuma,Changed by mirukuma,Changed by CS017--><br><br><!--Added by JPNYKW-->
+                  <div class="explain">
+                        <div class="project-name sort">
+                              <p><span class="head">C</span>ute</p>
+                              <p><span class="head">G</span>irls</p>
+                              <p><span class="head">G</span>enerator</p>
+                        </div>
 
-			<canvas id="output" width="128px" height="128px"></canvas><!--Added by JPNYKW--><br>
-			<button id="download" onclick="downloadHandle()" disabled>Download Image!</button><!--Added by CS017,Changed by JPNYKW,Changed by CS017-->
-		</div>
+                        <div class="h-line sort"></div>
 
-		&spades; Here is page of motion test. yet not finished.<!--Added by JPNYKW-->
-		<br>Version : 1.2(Beta)<!--Added by JPNYKW-->
-		
-		<!--<script src="dist/keras.js"></script><!--Added by mirukuma-->
-		<script src="dist/webdnn.js"></script>
-		<script src="js/generate.js"></script> <!--Added by mirukuma-->
-		
-		<script src="js/canvasKit.js"></script><!--Added by JPNYKW-->
-		<script src="js/draw.js"></script><!--Added by JPNYKW-->
-		<script src="js/main.js"></script><!--Added by JPNYKW-->
-	</center>
-</body>
+                        <div class="text sort">
+                              <p>Cute Girls Generator（CGG）とは</p>
+                              <p>Pythonによる機械学習を用いて、</p>
+                              <p>数多くの女の子の画像を学習させ、</p>
+                              <p>学習情報から新たに女の子を</p>
+                              <p>生成するサービスです。</p>
+                        </div>
+                  </div>
+            </div>
 
+            <div class="footer">
+                  <p>&copy; 2018 The team PMG</p>
+            </div>
+
+            <!--<script src="dist/keras.js"></script>-->
+            <script src="dist/webdnn.js"></script>
+            <script src="js/generate.js"></script>
+            <script src="js/canvasKit.js"></script>
+            <script src="js/draw.js"></script>
+            <script src="main.js"></script>
+      </body>
 </html>
