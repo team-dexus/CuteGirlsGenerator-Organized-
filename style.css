@@ -124,6 +124,7 @@ body {
       width: 1000px;
       margin: auto;
 
+      padding-bottom: 50px;
       position: relative;
       top: 50px;
 }
@@ -174,12 +175,13 @@ body {
       height: 30px;
       width: 100%;
 
-      position: absolute;
+      position: fixed;
       bottom: 0px;
 }
 
 .footer p {
       font-size: 15px;
+      margin-top: 20px;
 
       position: relative;
       top: -10px;
