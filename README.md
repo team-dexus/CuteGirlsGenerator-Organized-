@@ -18,7 +18,14 @@ _<a href="http://make.girls.moe/#/">this</a> page._
 >will be running on this site.  
 
 ### Screen shots
-<img src="https://snag.gy/uWLHm5.jpg" title="This is a new version!">
+
+version 1.2
+<img src="https://snag.gy/120V87.jpg" title="New version">
+
+version 1.1
+<img src="https://snag.gy/uWLHm5.jpg" title="Old version">
+
+version 1.0
 <img src="http://i.cubeupload.com/k6BJh4.jpg" title="Old version">
 
 _Will be run on <a href="https://teampmg.github.io/CuteGirlsGenerator-Organized-/">this</a> page._
