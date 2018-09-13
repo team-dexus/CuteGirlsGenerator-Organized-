@@ -21,7 +21,7 @@ _<a href="http://make.girls.moe/#/">this</a> page._
 <img src="https://snag.gy/uWLHm5.jpg" title="This is a new version!">
 <img src="http://i.cubeupload.com/k6BJh4.jpg" title="Old version">
 
-_Will be run on <a href="https://TeamPMG.github.io/CuteGirlsGenerator/">this</a> page._
+_Will be run on <a href="https://teampmg.github.io/CuteGirlsGenerator-Organized-/">this</a> page._
 
 Now, in this page can generate images (24*40).
 
