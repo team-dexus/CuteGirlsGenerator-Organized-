@@ -124,7 +124,6 @@ body {
       width: 1000px;
       margin: auto;
 
-      padding-bottom: 50px;
       position: relative;
       top: 50px;
 }
@@ -141,7 +140,7 @@ body {
       text-align: left;
 
       position: relative;
-      right: 30px;
+      right: 80px;
       top: -10px;
 }
 
@@ -154,7 +153,7 @@ body {
       font-size: 20px;
 
       position: relative;
-      left: 50px;
+      left: 100px;
 }
 
 .explain .h-line {
@@ -181,7 +180,6 @@ body {
 
 .footer p {
       font-size: 15px;
-      margin-top: 20px;
 
       position: relative;
       top: -15px;
