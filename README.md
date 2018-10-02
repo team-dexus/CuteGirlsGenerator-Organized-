@@ -1,23 +1,18 @@
 # CuteGirlsGenerator
 
 ## What is the projects
->Please check the site of "Make Girls Moe"  
+>Please check the site "Make Girls Moe"  
 >as a prerequisite to progress the story.  
+( http://make.girls.moe/#/ )
 
-<img src="http://i.cubeupload.com/iBs8gD.png" title="MakeGirlsMoe">
-
-_<a href="http://make.girls.moe/#/">this</a> page._
-
-*We respect the service.*  
-*We'll make a new service like this.*
+We respect the service, and we'll make a new service like this.
 
 - - -
 
-## Demo web site
->In the future the project  
->will be running on this site.  
-
 ### Screen shots
+
+There's pictures are we yet made in the demo site.  
+so you can check out there's.
 
 version 1.2
 <img src="https://snag.gy/120V87.jpg" title="New version">
@@ -27,10 +22,6 @@ version 1.1
 
 version 1.0
 <img src="http://i.cubeupload.com/k6BJh4.jpg" title="Old version">
-
-_Will be run on <a href="https://teampmg.github.io/CuteGirlsGenerator-Organized-/">this</a> page._
-
-Now, in this page can generate images (24*40).
 
 - - -
 
