@@ -25,7 +25,7 @@ class EqualizedConv2d(chainer.Chain):
         with self.init_scope():
             self.c1=L.Convolution2D(in_dim, out_dim, ksize, stride, pad, initialW=w)
     def __call__(self,x,normalize = True,dropout = False):
-        h = self.c1(x * self.inv_c)
+        h = self.c1(x * self.inv_c * 0.999)
 
         if normalize:
             h = self.normalize(h)
@@ -119,7 +119,8 @@ class generator(chainer.Chain):
         else:
             h = getattr(self, "b%d" % (depth-1))(h,True)
 
-        #h = F.minimum(h,xp.ones(h.shape).astype(np.float32))
+        h = F.minimum(h,np.ones(h.shape).astype(np.float32))
+        h = F.average_pooling_2d(h, (1,2), (1,2))
         #h = F.maximum(h,-1 * xp.ones(h.shape).astype(np.float32))
 
         return h
@@ -150,11 +151,12 @@ def save_generated_image(image,name):
 
 z_size = 128
 
-noise=np.random.normal(0, 0.5, [1,z_size])
+noise=np.random.normal(0, 0.5, [32,z_size])
 
 #model_set
 g = generator(512, 512, z_size)
 serializers.load_npz("generator.model", g)
+
 x = chainer.Variable(np.zeros((1,z_size), dtype=np.float32))
 y = g(x,np.zeros(NUMBER_OF_TAG),5,1)
 

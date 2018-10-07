@@ -17,7 +17,9 @@ const defaultSize = 256;
             w = w === '' ? defaultSize : ~~w;
             h = h === '' ? defaultSize : ~~h;
 
-            canv.width = canv.height = 335;
+            //canv.width = canv.height = 335;
+            canv.width  = 128;
+            canv.height = 256;
 
             // Onload data of models.
             let button = {

@@ -11,6 +11,16 @@ function generate() {
 	pic.src = item[~~(Math.random() * 3)];
 }
 
+function random_norm() {
+  //平均0、標準偏差1の正規乱数を返す。
+  var s, i;
+  s = 0;
+  for(i = 0; i < 12; i++) {
+    s += Math.random();
+  }
+  return s - 6;
+}
+
 function generate2() {
 	document.getElementById('generate').setAttribute('disabled', true);
 	onGenerated && document.getElementById('download').setAttribute('disabled', true);
@@ -18,11 +28,13 @@ function generate2() {
 
 	// Generate
 	let x = runner.inputs[0], y = runner.outputs[0], noise;
-
+	threshold = 0.3
 	noise_size = 128;
 	noise = new Float32Array(noise_size);
 	for(let i = 0; i < noise_size; i++) {
-		noise[i] = Math.random() * 2 - 1;
+		do {
+			noise[i] = random_norm()
+		}while(Math.abs(noise[i]) > threshold);
 	}
 
 /*
@@ -45,7 +57,7 @@ function generate2() {
 		console.log('Before', y); // debug
 		let y_typed_array = y.toActual();
 		console.log('After', y_typed_array);
-		
+
 		if (y_typed_array.includes(NaN)) {
 			console.timeEnd();
 			alert('Failed the generated.');
@@ -54,7 +66,7 @@ function generate2() {
 			generatedData = y_typed_array;
 			drawGeneratedImage(generatedData);
 		}
-		
+
 		onGenerated = true;
 		document.getElementById('generate').removeAttribute('disabled');
 		document.getElementById('download').removeAttribute('disabled');

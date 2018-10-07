@@ -1,9 +1,9 @@
-wid = 128, hig = 128; // for draw engine
+wid = 128, hig = 256; // for draw engine
 CanvasRenderingContext2D.prototype.drawImageByData = function(ary, width, height, find, px, x, y) {
 	let z = ary.length / 3,
 		dy = y + px / 2,
 		idx = find;
-	
+
 	for(let hc = 0; hc < height; hc++) {
 		let dx = x + px / 2;
 		for(let wc = 0; wc < width; wc++) {
@@ -24,5 +24,5 @@ CanvasRenderingContext2D.prototype.drawImageByData = function(ary, width, height
 
 function drawGeneratedImage(data) {
       cont.clearRect(0, 0, canv.width, canv.height);
-      cont.drawImageByData(data, wid, hig, 0, 2, 0, 0);
+      cont.drawImageByData(data, wid, hig, 0, 1, 0, 0);
 }
