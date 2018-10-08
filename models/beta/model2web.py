@@ -250,7 +250,7 @@ class generator2(chainer.Chain):
 
 z_size = 128
 g2 = generator2(512, 512, z_size)
-serializers.load_npz("generator2.model", g2)
+serializers.load_npz("generator03.model", g2)
 g = generator(512, 512, z_size)
 serializers.load_npz("generator_SRB.model", g)
 x = chainer.Variable(np.zeros((1,z_size), dtype=np.float32))
