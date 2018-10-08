@@ -277,5 +277,5 @@ graph = ChainerConverter().convert([x], [y])
 
 flags.optimize.REPLACE_SCALAR_OPERATOR = 0
 flags.optimize.OPTIMIZE_MEMORY_ALLOCATION=0
-exec_info = generate_descriptor("webgl", graph)  # also "webassembly", "webgl", "fallback" are available.
+exec_info = generate_descriptor("webassembly", graph)  # also "webassembly", "webgl", "fallback" are available.
 exec_info.save("./output")
